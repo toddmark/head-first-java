@@ -2,13 +2,15 @@ class Dog {
   int size;
   String breed;
   String name;
-  vodi bark() {
+  void bark() {
     System.out.println("Ruff!");
   }
 }
 
 class DogTestDrive {
   public static void main(String[] args) {
-    // Test Dog
+    Dog d = new Dog();    // Test Dog
+    d.size = 40;
+    d.bark();
   }
 }
