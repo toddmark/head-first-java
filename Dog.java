@@ -1,16 +1,33 @@
 class Dog {
-  int size;
-  String breed;
   String name;
-  void bark() {
-    System.out.println("Ruff!");
-  }
-}
-
-class DogTestDrive {
   public static void main(String[] args) {
-    Dog d = new Dog();    // Test Dog
-    d.size = 40;
-    d.bark();
+    Dog dog1 = new Dog();
+    dog1.bark();
+    dog1.name = "Bark";
+
+    Dog[] myDogs =new Dog[3];
+
+    myDogs[0] = new Dog();
+    myDogs[1] = new Dog();
+    myDogs[2] = dog1;
+
+    myDogs[0].name = "Fred";
+    myDogs[1].name = "Marge";
+
+    System.out.print("last dog's name is:");
+    System.out.println(myDogs[2].name);
+
+    int x = 0;
+    while(x < myDogs.length) {
+      myDogs[x].bark();
+      x++;
+    }
   }
+
+  public void bark() {
+    System.out.println(name + " wa wa!");
+  }
+
+  public void eat() {}
+  public void chaseCat() {}
 }
