@@ -3,10 +3,14 @@ import java.util.ArrayList;
 public class DotCom {
 
   private ArrayList<String> locationCells;
-  // private int numOfHits = 0;
+  private String name;
 
   public void setLocationCells(ArrayList<String> loc) {
     locationCells = loc;
+  }
+
+  public void setName(String n) {
+    name = n;
   }
 
   public String checkYourself(String userInput) {
@@ -17,21 +21,11 @@ public class DotCom {
       locationCells.remove(index);
       if (locationCells.isEmpty()) {
         result = "kill";
+        System.out.println("Ouch! You sunk " + name + " :( ");
       } else {
         result = "hit";
       }
     }
-    // for (int cell : locationCells) {
-    //   if (guess == cell) {
-    //     result = "hit";
-    //     numOfHits++;
-    //     break;
-    //   }
-    // }
-    // if (numOfHits == locationCells.length) {
-    //   result = "kill";
-    // }
-    System.out.println(result);
     return result;
   }
 }
