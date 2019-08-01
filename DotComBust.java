@@ -21,6 +21,7 @@ public class DotComBust {
 
     for (DotCom dotComToSet : dotComsList) {
       ArrayList<String> newLocation = helper.placeDotCom(3);
+      System.out.println(newLocation);
       dotComToSet.setLocationCells(newLocation);
     }
   }
@@ -38,7 +39,7 @@ public class DotComBust {
     String result = "miss";
     for (DotCom dotComToTest : dotComsList) {
       result = dotComToTest.checkYourself(userGuess);
-      if (result.equals("his")) {
+      if (result.equals("hit")) {
         break;
       }
       if (result.equals("kill")) {
@@ -55,7 +56,7 @@ public class DotComBust {
     if (numOfGuesses <= 18) {
       System.out.println("You got out before your options sank.");
     } else {
-      System.out.println("Took you long enough. " + numOfGuesses + " guesses.")
+      System.out.println("Took you long enough. " + numOfGuesses + " guesses.");
       System.out.println("Fish are dancing with your options");
     }
   }
