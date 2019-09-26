@@ -13,7 +13,7 @@ public class Game {
     locations.add(String.valueOf(randomNum + 1));
     locations.add(String.valueOf(randomNum + 2));
     theDotCom.setLocationCells(locations);
-
+    
     boolean isActive = true;
 
     while (isActive == true) {

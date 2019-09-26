@@ -11,7 +11,7 @@ class StaticSuper {
 public class StaticTests extends StaticSuper {
   static int rand;
   static {
-    rand = (int)(Math.random() * 6);
+    rand = (int)(Math.random() * 99);
     System.out.println("static block" + rand);
   }
 
