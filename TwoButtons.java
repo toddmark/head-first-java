@@ -34,13 +34,13 @@ public class TwoButtons {
   }
 
   class LabelListener implements ActionListener {
-    public void actionPerformed(ActiveEvent event) {
+    public void actionPerformed(ActionEvent e) {
       label.setText("Ouch!");
     }
   }
 
   class ColorListener implements ActionListener {
-    public void actionPerformed(ActiveEvent event) {
+    public void actionPerformed(ActionEvent e) {
       frame.repaint();
     }
   }
