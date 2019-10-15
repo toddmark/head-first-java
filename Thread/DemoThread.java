@@ -2,7 +2,7 @@ package Thread;
 
 class SaleTickets implements Runnable {
   private int tickets = 100;
-  
+
   public void run() {
     synchronized (this) {
       while (tickets > 0) {
