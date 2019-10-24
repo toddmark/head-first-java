@@ -1,6 +1,10 @@
 import java.io.Serializable;
 
 public class GameCharacter implements Serializable {
+  /**
+   *
+   */
+  private static final long serialVersionUID = 1L;
   private int level = 0;
   private String name = "";
   private String[] weapons = {};

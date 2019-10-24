@@ -2,11 +2,11 @@ package Thread;
 
 class BankAccount {
   private int balance = 100;
-  
+
   public int getBalance() {
     return balance;
   }
-  
+
   public void withdraw(int amount) {
     balance = balance - amount;
   }
@@ -14,7 +14,7 @@ class BankAccount {
 
 public class RyanAndMonicaJob implements Runnable {
   private BankAccount account = new BankAccount();
-  
+
   public static void main(String[] args) {
     RyanAndMonicaJob theJob = new RyanAndMonicaJob();
     Thread one = new Thread(theJob);
@@ -24,7 +24,7 @@ public class RyanAndMonicaJob implements Runnable {
     one.start();
     two.start();
   }
-  
+
   public void run() {
     for(int x = 0; x < 10; x++) {
       makeWithdrawal(10);
@@ -33,7 +33,7 @@ public class RyanAndMonicaJob implements Runnable {
       }
     }
   }
-  
+
   private synchronized void makeWithdrawal(int amount) {
     if (account.getBalance() >= amount) {
       System.out.println(Thread.currentThread().getName() + " is about to withdraw");

@@ -21,6 +21,6 @@ public class StaticTests extends StaticSuper {
 
   public static void main(String [] args) {
     System.out.println("in main");
-    StaticTests st = new StaticTests();
+    // StaticTests st = new StaticTests();
   }
 }
